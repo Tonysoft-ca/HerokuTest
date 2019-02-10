@@ -15,6 +15,21 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
   .get('/cool',(req,res)=>res.send(cool()))
+  .get('/register',async (req,res)=>{
+	  try{
+		   
+		  
+		 // const client=await pool.connect()
+		 // const result=await client.query('Insert into test_table values ()');
+		 // const results = {'results':(result) ? result.rows:null};
+		  res.render('pages/register', results);
+		 // client.release();
+	  }
+	  catch(err){
+		  console.error(err);
+		  res.send("Error " + err);
+	  }
+  })
   .get('/times',(req,res)=>res.send(showTimes()))
   .get('/db',async (req,res)=>{
 	  try{
