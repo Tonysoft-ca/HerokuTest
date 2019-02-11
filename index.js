@@ -22,7 +22,7 @@ express()
 		 // const client=await pool.connect()
 		 // const result=await client.query('Insert into test_table values ()');
 		 // const results = {'results':(result) ? result.rows:null};
-		  res.render('pages/register', results);
+		  res.render('pages/register');
 		 // client.release();
 	  }
 	  catch(err){
